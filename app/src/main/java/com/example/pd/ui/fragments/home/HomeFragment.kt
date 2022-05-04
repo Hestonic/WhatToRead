@@ -32,7 +32,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun initViewModel() {
-        TODO("Not yet implemented")
     }
 
     private fun setupRecycler() {

@@ -19,4 +19,9 @@
     <string name="morphological">Морфологический разбор</string>
     <string name="label_reviews">Отзывы</string>
     <string name="should_like">Вам понравится</string>
+    <string name="profile_name">Имя Фамилия</string>
+    <string name="favorites">Избранное</string>
+    <string name="read">Прочитанное</string>
+    <string name="exit">ВЫХОД</string>
+    <string name="phone_label">Номер телефона</string>
 </resources>

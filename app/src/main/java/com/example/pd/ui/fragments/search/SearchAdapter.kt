@@ -44,10 +44,10 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
             binding.posterReviews.text = labelReviews + searchUiModel.reviews.toString()
             binding.posterDescription.text = searchUiModel.description
 
-            poster.setOnClickListener {
+            /*poster.setOnClickListener {
                 val action = RecommendFragmentDirections.actionRecommendFragmentToDetailsFragment()
                 poster.findNavController().navigate(action)
-            }
+            }*/
         }
     }
 

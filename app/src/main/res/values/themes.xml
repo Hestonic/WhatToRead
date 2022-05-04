@@ -55,4 +55,22 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/dark_purple</item>
     </style>
+
+    <style name="profile_name">
+        <item name="lineHeight">21dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="profile_chips">
+        <item name="lineHeight">21dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="phone_number_label">
+        <item name="lineHeight">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>
