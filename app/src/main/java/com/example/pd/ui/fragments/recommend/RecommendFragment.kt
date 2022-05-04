@@ -5,11 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pd.databinding.FragmentRecommendBinding
 import com.example.pd.ui.model.RecommendHolderData
-import com.example.pd.ui.model.RecommendUiModel
 
 class RecommendFragment : Fragment() {
 

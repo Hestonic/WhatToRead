@@ -27,7 +27,5 @@ object RetrofitInstance {
         retrofit.create(WtrApi::class.java)
     }
 
-    private val localDataSource = LocalDataSource()
     private val remoteDataSource = RemoteDataSource(api)
-    val repository = Repository(localDataSource, remoteDataSource)
 }

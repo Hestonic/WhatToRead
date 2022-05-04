@@ -30,7 +30,6 @@ object RecommendHolderData {
                 " Захватывающая история о хорошем парне, который выполняет плохую работу...\n"
     )
 
-
     val recommendList = listOf(
         recommend1,
         recommend2
