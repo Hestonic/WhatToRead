@@ -1,10 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/round_bg_item_poster">
+    android:background="@drawable/round_bg_item_poster"
+    android:padding="8dp">
 
+    <ImageView
+        android:id="@+id/ic_favourite"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/favourite_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="46dp"
+        android:layout_height="80dp"
+        android:background="@color/black_cobalt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/poster_name"
+        style="@style/poster_name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/billy_simers"
+        app:layout_constraintBottom_toTopOf="@+id/poster_author"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/poster_author"
+        style="@style/poster_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/stephen_king"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
+    <ImageView
+        android:id="@+id/ic_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/star_filled"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/poster_author"
+        app:layout_constraintTop_toBottomOf="@+id/poster_author" />
+
+    <TextView
+        android:id="@+id/poster_rating"
+        style="@style/poster_rating_reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="@string/rating_value"
+        app:layout_constraintBottom_toBottomOf="@id/ic_star"
+        app:layout_constraintStart_toEndOf="@id/ic_star"
+        app:layout_constraintTop_toTopOf="@id/ic_star" />
+
+    <TextView
+        android:id="@+id/poster_reviews"
+        style="@style/poster_rating_reviews"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/reviews_value"
+        app:layout_constraintBottom_toBottomOf="@id/ic_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/poster_rating"
+        app:layout_constraintTop_toTopOf="@id/ic_star" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Прочитано"
+        app:layout_constraintEnd_toStartOf="@id/check_ring"
+        app:layout_constraintBottom_toBottomOf="@id/check_ring"
+        app:layout_constraintTop_toTopOf="@id/check_ring"
+        style="@style/poster_rating_reviews"
+        android:layout_marginEnd="8dp"/>
+
+    <ImageView
+        android:id="@+id/check_ring"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/poster_reviews"
+        android:src="@drawable/check_ring_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
