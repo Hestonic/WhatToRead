@@ -6,11 +6,7 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pd.databinding.ItemRecommendBinding
-import com.example.pd.ui.fragments.recommend.RecommendFragmentDirections
 import com.example.pd.ui.model.SearchUiModel
-
-/*class SearchAdapter {
-}*/
 
 class SearchAdapter : RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
 
@@ -44,10 +40,10 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
             binding.posterReviews.text = labelReviews + searchUiModel.reviews.toString()
             binding.posterDescription.text = searchUiModel.description
 
-            /*poster.setOnClickListener {
-                val action = RecommendFragmentDirections.actionRecommendFragmentToDetailsFragment()
+            poster.setOnClickListener {
+                val action = SearchFragmentDirections.actionSearchFragmentToDetailsFragment()
                 poster.findNavController().navigate(action)
-            }*/
+            }
         }
     }
 

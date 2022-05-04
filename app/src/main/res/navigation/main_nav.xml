@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.pd.ui.fragments.home.HomeFragment"
-        android:label="fragment_home"
+        android:label=""
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_recommendFragment"
@@ -17,11 +17,8 @@
     <fragment
         android:id="@+id/recommendFragment"
         android:name="com.example.pd.ui.fragments.recommend.RecommendFragment"
-        android:label="fragment_recommend"
+        android:label="Вам понравится"
         tools:layout="@layout/fragment_recommend" >
-        <action
-            android:id="@+id/action_recommendFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
         <action
             android:id="@+id/action_recommendFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
@@ -29,19 +26,12 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.pd.ui.fragments.details.DetailsFragment"
-        android:label="fragment_details"
-        tools:layout="@layout/fragment_details" >
-        <action
-            android:id="@+id/action_detailsFragment_to_recommendFragment"
-            app:destination="@id/recommendFragment" />
-        <action
-            android:id="@+id/action_detailsFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
-    </fragment>
+        android:label="О книге"
+        tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.pd.ui.fragments.search.SearchFragment"
-        android:label="fragment_search"
+        android:label=""
         tools:layout="@layout/fragment_search" >
         <action
             android:id="@+id/action_searchFragment_to_filterFragment"
@@ -53,7 +43,7 @@
     <fragment
         android:id="@+id/filterFragment"
         android:name="com.example.pd.ui.fragments.filter.FilterFragment"
-        android:label="fragment_filter"
+        android:label="Фильтры"
         tools:layout="@layout/fragment_filter" >
         <action
             android:id="@+id/action_filterFragment_to_searchFragment"
@@ -62,19 +52,39 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.pd.ui.fragments.profile.ProfileFragment"
-        android:label="fragment_profile"
+        android:label=""
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profileFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_readFragment"
+            app:destination="@id/readFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_favouritesFragment"
+            app:destination="@id/favouritesFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.pd.ui.fragments.settings.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" >
+        android:label="Настройки профиля"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.example.pd.ui.fragments.favourites.FavouritesFragment"
+        android:label="Избранное"
+        tools:layout="@layout/fragment_favourites" >
         <action
-            android:id="@+id/action_settingsFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_favouritesFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readFragment"
+        android:name="com.example.pd.ui.fragments.read.ReadFragment"
+        android:label="Прочитанное"
+        tools:layout="@layout/fragment_read" >
+        <action
+            android:id="@+id/action_readFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
 </navigation>
