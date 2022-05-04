@@ -12,5 +12,47 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/black_cobalt</item>
+    </style>
+
+    <style name="poster_name">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">21sp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="poster_expandable_tittle">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">21sp</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="poster_author">
+        <item name="lineHeight">16sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="poster_genres">
+        <item name="lineHeight">14sp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="poster_rating_reviews">
+        <item name="lineHeight">16sp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="poster_description">
+        <item name="lineHeight">14sp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="poster_more">
+        <item name="lineHeight">14sp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/dark_purple</item>
     </style>
 </resources>

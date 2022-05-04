@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">PD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="billy_simers">Билли Симерс</string>
+    <string name="stephen_king">Стивен Кинг</string>
+    <string name="genres">фантастика, ужасы и мистика</string>
+    <string name="rating_value">4.04</string>
+    <string name="reviews_value">Отзывов: 183</string>
+    <string name="poster_description">Новый роман Стивена Кинга! Захватывающая история о хорошем парне, который выполняет плохую работу...</string>
+    <string name="more">Подробнее...</string>
+    <string name="label_author">Автор:</string>
+    <string name="label_genres">Жанр:</string>
+    <string name="label_rating">Ваша оценка:</string>
+    <string name="label_average_rating">Средняя оценка:</string>
+    <string name="age_limit">Возрастное ограничение: 16+</string>
+    <string name="label_annotation">Аннотация</string>
+    <string name="annotation">Новый роман Стивена Кинга! Захватывающая история о хорошем парне, который выполняет плохую работу. Стивен Кинг — один из самых популярных авторов современности. Он написал свыше шести десятков бестселлеров, которые переведены на 44 языка, изданы в 80 странах мира и разошлись тиражом свыше 400.000.000 экземпляров. «Лучшая книга Стивена Кинга за долгие годы» по версии газеты The Guardian.</string>
+    <string name="morphological">Морфологический разбор</string>
+    <string name="label_reviews">Отзывы</string>
+    <string name="should_like">Вам понравится</string>
 </resources>
