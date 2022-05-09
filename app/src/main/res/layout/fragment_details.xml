@@ -187,12 +187,11 @@
         android:id="@+id/description_barrier"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="age_limit, image"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/age_limit" />
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="image, age_limit" />
 
     <!-- TODO: сделать тень -->
-    <androidx.appcompat.widget.LinearLayoutCompat
+   <!-- <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/block_annotation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -219,16 +218,16 @@
             android:layout_marginTop="10dp"
             android:text="@string/annotation" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/block_annotation" />
+        app:layout_constraintTop_toBottomOf="@id/description_barrier" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

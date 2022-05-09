@@ -22,6 +22,17 @@
         <item name="fontFamily">@font/roboto_bold</item>
     </style>
 
+    <style name="label_expandable_details_tittle">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">21sp</item>
+    </style>
+
+    <style name="label_expandable_details_tittle_clicked">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">21sp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
     <style name="poster_expandable_tittle">
         <item name="android:textSize">18sp</item>
         <item name="lineHeight">21sp</item>
@@ -99,7 +110,12 @@
         <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/black_cobalt</item>
         <item name="android:fontFamily">@font/roboto_thin</item>
+    </style>
 
+    <style name="comment_name">
+        <item name="lineHeight">21dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
     </style>
 
 </resources>

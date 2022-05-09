@@ -1,37 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/poster_bg"
-    app:cardCornerRadius="5dp"
-    app:cardElevation="5dp"
-    app:contentPaddingBottom="10dp"
-    app:contentPaddingLeft="10dp"
-    app:contentPaddingRight="10dp"
-    app:contentPaddingTop="5dp">
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/round_bg_item_poster"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="10dp">
 
     <!--TODO: доделать-->
-    <LinearLayout
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tittle"
+            style="@style/label_expandable_details_tittle"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/morphological" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/expand_down_light"
+            android:layout_gravity="center" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/expandable_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/label_annotation"
-            style="@style/poster_expandable_tittle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/morphological" />
-
-        <TextView
-            android:id="@+id/annotation"
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/annotation" />
 
-    </LinearLayout>
+        <!-- TODO: Доделать комменты -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-</androidx.cardview.widget.CardView>
+</LinearLayout>
+

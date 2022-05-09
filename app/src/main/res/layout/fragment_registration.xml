@@ -6,6 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.registration.RegistrationFragment">
 
+    <!-- TODO: Сделать через recycler -->
+
     <TextView
         android:id="@+id/authorization_label"
         style="@style/authorization_label"

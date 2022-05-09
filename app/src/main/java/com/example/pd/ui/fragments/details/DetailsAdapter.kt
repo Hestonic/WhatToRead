@@ -2,7 +2,9 @@ package com.example.pd.ui.fragments.details
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pd.databinding.ItemExpandableDetailsBinding
 import com.example.pd.ui.model.ExpandableDescription
@@ -17,22 +19,26 @@ class DetailsAdapter : RecyclerView.Adapter<DetailsAdapter.DetailsHolder>() {
     }
 
     override fun onBindViewHolder(holder: DetailsHolder, position: Int) {
-        val home = detailsList[position]
-        holder.bind(home)
+        val details = detailsList[position]
+        holder.bind(details)
     }
 
     override fun getItemCount(): Int = detailsList.size
 
     inner class DetailsHolder(private val binding: ItemExpandableDetailsBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(home: ExpandableDescription) = binding.run {
+        fun bind(details: ExpandableDescription) = binding.run {
+            binding.tittle.text = details.tittle
+            binding.description.text = details.description
 
+            val isVisible = details.visible
+            binding.expandableLayout.isVisible = isVisible
         }
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(details: List<ExpandableDescription>) {
-        detailsList = details
+    fun setData(detailsL: List<ExpandableDescription>) {
+        detailsList = detailsL
         notifyDataSetChanged()
     }
 }

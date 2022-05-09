@@ -1,19 +1,17 @@
 package com.example.pd.ui.fragments.details
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pd.R
 import com.example.pd.databinding.FragmentDetailsBinding
-import com.example.pd.databinding.FragmentHomeBinding
+import com.example.pd.ui.model.DetailsHolder
 
 class DetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailsBinding
-    private lateinit var viewModel: DetailsViewModel
     private val adapter = DetailsAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,10 +22,10 @@ class DetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentDetailsBinding.inflate(inflater, container, false)
         setupRecycler()
-
+        adapter.setData(DetailsHolder.billySummers.expandableDescription)
         return binding.root
     }
 
