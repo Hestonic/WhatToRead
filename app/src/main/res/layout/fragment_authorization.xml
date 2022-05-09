@@ -1,14 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="32dp"
     tools:context=".AuthorizationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/authorization_label"
+        style="@style/authorization_label_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/authorization_label"
+        app:layout_constraintBottom_toBottomOf="@id/delimiter"
+        app:layout_constraintEnd_toStartOf="@id/delimiter"
+        app:layout_constraintTop_toTopOf="@id/delimiter"
+        app:layout_constraintVertical_bias="0.2" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/delimiter"
+        style="@style/delimiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delimiter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/layout_login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/registration_label"
+        style="@style/authorization_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/registration_label"
+        app:layout_constraintBottom_toBottomOf="@id/delimiter"
+        app:layout_constraintStart_toEndOf="@id/delimiter"
+        app:layout_constraintTop_toTopOf="@id/delimiter"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/password"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="20" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_login"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:hint="@string/login"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/authorization_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="20" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/authorization_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/poster_bg"
+        android:text="@string/authorization_button"
+        android:textColor="@color/black_cobalt"
+        android:textColorHint="@color/black_cobalt"
+        app:layout_constraintTop_toBottomOf="@id/layout_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

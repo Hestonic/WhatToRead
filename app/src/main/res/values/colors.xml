@@ -10,6 +10,8 @@
 
     <color name="dark_purple">#3B136F</color>
     <color name="black_cobalt">#1D1E2C</color>
+    <color name="black_cobalt_80">#CB1D1E2C</color>
     <color name="poster_bg">#EFEFEF</color>
+    <color name="red">#CDFF0000</color>
 
 </resources>

@@ -85,4 +85,21 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="authorization_label">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black_cobalt_80</item>
+    </style>
+
+    <style name="authorization_label_active">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/dark_purple</item>
+    </style>
+
+    <style name="delimiter">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/black_cobalt</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+
+    </style>
+
 </resources>

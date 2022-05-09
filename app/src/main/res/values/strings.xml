@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">PD</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="billy_simers">Билли Симерс</string>
     <string name="stephen_king">Стивен Кинг</string>
@@ -32,4 +32,14 @@
     <string name="change_miniature">Изменить миниатюру</string>
     <string name="preferences_text">Эта подборка создана с учетом ваших предпочтений</string>
     <string name="favourites_count">123</string>
+    <string name="password">Пароль</string>
+    <string name="registration_label">Регистрация</string>
+    <string name="delimiter">|</string>
+    <string name="authorization_button">Войти</string>
+    <string name="registration_button">Зарегестрироваться</string>
+    <string name="authorization_label">Авторизация</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password_repeat">Повторите пароль</string>
+    <string name="login">Логин</string>
+    <string name="settings">Настройки</string>
 </resources>
