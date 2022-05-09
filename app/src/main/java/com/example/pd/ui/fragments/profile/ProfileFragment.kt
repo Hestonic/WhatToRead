@@ -40,6 +40,10 @@ class ProfileFragment : Fragment() {
                 .create().show()
         }
 
+        binding.exitButton.setOnClickListener {
+            findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToAuthorizationFragment())
+        }
+
         return binding.root
     }
 }
