@@ -7,8 +7,8 @@
     <string name="genres">фантастика, ужасы и мистика</string>
     <string name="rating_value">4.04</string>
     <string name="reviews_value">Отзывов: 183</string>
-    <string name="poster_description">Новый роман Стивена Кинга! Захватывающая история о хорошем парне, который выполняет плохую работу...</string>
-    <string name="more">Подробнее...</string>
+    <string name="poster_description">Новый роман Стивена Кинга! Захватывающая история о хорошем парне, который выполняет плохую работу…</string>
+    <string name="more">Подробнее…</string>
     <string name="label_author">Автор:</string>
     <string name="label_genres">Жанр:</string>
     <string name="label_rating">Ваша оценка:</string>
@@ -24,4 +24,12 @@
     <string name="read">Прочитанное</string>
     <string name="exit">ВЫХОД</string>
     <string name="phone_label">Номер телефона</string>
+    <string name="surname">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="save_changes">Сохранить изменения</string>
+    <string name="phone_number">+7 (999) 999–99–99</string>
+    <string name="change_avatar">Изменить фотографию</string>
+    <string name="change_miniature">Изменить миниатюру</string>
+    <string name="preferences_text">Эта подборка создана с учетом ваших предпочтений</string>
+    <string name="favourites_count">123</string>
 </resources>

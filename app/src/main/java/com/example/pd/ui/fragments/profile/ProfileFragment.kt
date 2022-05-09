@@ -1,5 +1,6 @@
 package com.example.pd.ui.fragments.profile
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,6 +29,15 @@ class ProfileFragment : Fragment() {
 
         binding.settingsBlock.setOnClickListener {
             findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToSettingsFragment())
+        }
+
+        binding.exitButton.setOnClickListener {
+            AlertDialog.Builder(requireContext())
+                .setTitle("Обновить данные")
+                .setMessage("Данные устарели, поэтому перед обменом их необходимо обновить")
+                .setPositiveButton("Да") { _, _ -> }
+                .setNegativeButton("Нет") { _, _ -> }
+                .create().show()
         }
 
         return binding.root

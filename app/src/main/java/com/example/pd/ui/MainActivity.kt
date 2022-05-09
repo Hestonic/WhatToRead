@@ -2,6 +2,7 @@ package com.example.pd.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.core.view.isGone
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
