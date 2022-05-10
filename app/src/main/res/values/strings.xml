@@ -43,4 +43,6 @@
     <string name="login">Логин</string>
     <string name="settings">Настройки</string>
     <string name="comment">Прекрасная книга! Читаю взахлеб!</string>
+    <string name="filter">Фильтр</string>
+    <string name="search">Поиск</string>
 </resources>

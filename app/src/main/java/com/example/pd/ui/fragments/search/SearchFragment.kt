@@ -1,11 +1,12 @@
 package com.example.pd.ui.fragments.search
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.pd.R
 import com.example.pd.databinding.FragmentSearchBinding
 import com.example.pd.ui.model.SearchHolderData
 
@@ -16,6 +17,7 @@ class SearchFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
         initViewModel()
     }
 
@@ -36,5 +38,18 @@ class SearchFragment : Fragment() {
 
     private fun initViewModel() {
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_search_fragment, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_filter) {
+            val action = SearchFragmentDirections.actionSearchFragmentToFilterFragment()
+            findNavController().navigate(action)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
