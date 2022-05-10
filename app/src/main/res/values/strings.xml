@@ -10,7 +10,7 @@
     <string name="poster_description">Новый роман Стивена Кинга! Захватывающая история о хорошем парне, который выполняет плохую работу…</string>
     <string name="more">Подробнее…</string>
     <string name="label_author">Автор:</string>
-    <string name="label_genres">Жанр:</string>
+    <string name="label_genres">Жанр</string>
     <string name="label_rating">Ваша оценка:</string>
     <string name="label_average_rating">Средняя оценка:</string>
     <string name="age_limit">Возрастное ограничение: 16+</string>

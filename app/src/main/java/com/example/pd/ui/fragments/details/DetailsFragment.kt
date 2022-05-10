@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pd.databinding.FragmentDetailsBinding
-import com.example.pd.ui.model.DetailsHolder
+import com.example.pd.ui.model.DetailsObjectHolder
 
 class DetailsFragment : Fragment() {
 
@@ -25,7 +25,7 @@ class DetailsFragment : Fragment() {
     ): View {
         binding = FragmentDetailsBinding.inflate(inflater, container, false)
         setupRecycler()
-        adapter.setData(DetailsHolder.billySummers.expandableDescription)
+        adapter.setData(DetailsObjectHolder.billySummers.expandableDescription)
         return binding.root
     }
 
