@@ -7,7 +7,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pd.databinding.ItemFilterParentBinding
-import com.example.pd.ui.main.EqualSpacingItemDecoration
+import com.example.pd.utils.EqualSpacingItemDecoration
 import com.example.pd.ui.model.FilterBox
 import com.example.pd.ui.model.FilterObjectHolder
 
@@ -46,6 +46,7 @@ class FilterParentAdapter : RecyclerView.Adapter<FilterParentAdapter.FilterHolde
         fun bind(filterBox: FilterBox) = binding.run {
             binding.tittle.text = filterBox.tittle
             binding.expandableGroup.isVisible = filterBox.isVisible
+
 
         }
     }

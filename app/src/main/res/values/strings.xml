@@ -40,9 +40,11 @@
     <string name="authorization_label">Авторизация</string>
     <string name="e_mail">E-mail</string>
     <string name="password_repeat">Повторите пароль</string>
-    <string name="login">Логин</string>
+    <string name="login">E-mail / Phone</string>
     <string name="settings">Настройки</string>
     <string name="comment">Прекрасная книга! Читаю взахлеб!</string>
     <string name="filter">Фильтр</string>
     <string name="search">Поиск</string>
+    <string name="your_rating">Ваша оценка:</string>
+    <string name="comment_placeholder">Поделитесь своим мнением насчёт этой книги</string>
 </resources>

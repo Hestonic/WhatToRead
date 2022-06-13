@@ -18,7 +18,8 @@ class DetailsFragment : Fragment() {
         super.onCreate(savedInstanceState)
         initViewModel()
     }
-
+// TODO: recyclerview accordion
+    // TODO: render adapter, recyclerview adapter delegate
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

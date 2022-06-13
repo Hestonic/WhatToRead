@@ -27,7 +27,11 @@
         android:id="@+id/detailsFragment"
         android:name="com.example.pd.ui.fragments.details.DetailsFragment"
         android:label="О книге"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.pd.ui.fragments.search.SearchFragment"
@@ -108,4 +112,9 @@
             android:id="@+id/action_registrationFragment_to_authorizationFragment"
             app:destination="@id/authorizationFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.example.pd.ui.fragments.comment.CommentFragment"
+        android:label="fragment_comment"
+        tools:layout="@layout/fragment_comment" />
 </navigation>

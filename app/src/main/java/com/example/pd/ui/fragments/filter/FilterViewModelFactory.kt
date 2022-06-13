@@ -2,13 +2,12 @@ package com.example.pd.ui.fragments.filter
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.pd.domain.repository.Repository
 
-class FilterViewModelFactory(private val repository: Repository) : ViewModelProvider.Factory {
+class FilterViewModelFactory : ViewModelProvider.Factory {
     @Suppress("unchecked_cast")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(FilterViewModel::class.java))
-            return FilterViewModel(repository) as T
+            return FilterViewModel() as T
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

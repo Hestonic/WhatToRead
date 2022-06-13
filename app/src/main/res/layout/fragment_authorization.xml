@@ -45,8 +45,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="@string/password"
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
         app:helperTextTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,8 +66,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="@string/login"
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
         app:helperTextTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,8 +75,7 @@
             android:id="@+id/edit_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:maxLength="20" />
+            android:inputType="textEmailAddress"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

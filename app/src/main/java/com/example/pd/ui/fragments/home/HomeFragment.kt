@@ -5,13 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.pd.data.api.RetrofitInstance
+import com.example.pd.data.repository.AuthorizationRepositoryImpl
 import com.example.pd.databinding.FragmentHomeBinding
 import com.example.pd.ui.model.HomeHolderData
 
 class HomeFragment : Fragment() {
 
-    // private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: HomeViewModel
     private lateinit var binding: FragmentHomeBinding
     private val adapter = HomeAdapter()
 
@@ -27,11 +30,15 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         setupRecycler()
         adapter.setData(HomeHolderData.detailsList)
-
+    
+    
         return binding.root
     }
 
     private fun initViewModel() {
+//        val repository = AuthorizationRepositoryImpl(RetrofitInstance.remoteDataSource)
+        val viewModelFactory = HomeViewModelFactory()
+        viewModel = ViewModelProvider(this, viewModelFactory)[HomeViewModel::class.java]
     }
 
     private fun setupRecycler() {

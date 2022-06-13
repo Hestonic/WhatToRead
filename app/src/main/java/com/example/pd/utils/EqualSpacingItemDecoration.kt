@@ -1,4 +1,4 @@
-package com.example.pd.ui.main
+package com.example.pd.utils
 
 import android.graphics.Rect
 import android.view.View

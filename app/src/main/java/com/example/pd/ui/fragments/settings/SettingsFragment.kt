@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.pd.R
+import com.example.pd.databinding.DialogEditNameBinding
 import com.example.pd.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
@@ -23,22 +24,20 @@ class SettingsFragment : Fragment() {
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
         binding.editName.setOnClickListener {
-            val mDialogView =
-                LayoutInflater.from(requireContext()).inflate(R.layout.dialog_edit_name, null)
+            val dialogEditNameBinding = DialogEditNameBinding.inflate(inflater, container, false)
+                //LayoutInflater.from(requireContext()).inflate(R.layout.dialog_edit_name, null)
             val mBuilder = AlertDialog.Builder(requireContext())
-                .setView(mDialogView)
+                .setView(dialogEditNameBinding.root)
             val mAlertDialog = mBuilder.show()
 
-            val saveChangesButton = mDialogView.findViewById<TextView>(R.id.save_changes)
-            val editName = mDialogView.findViewById<EditText>(R.id.name)
-            val editSurname = mDialogView.findViewById<EditText>(R.id.surname)
-            saveChangesButton.setOnClickListener {
-                Toast.makeText(
+            /*TODO: dialog fragment*/
+            dialogEditNameBinding.saveChanges.setOnClickListener {
+                /*Toast.makeText(
                     requireContext(),
                     "Данные успешно изменены, ${editName.text}, ${editSurname.text}",
                     Toast.LENGTH_SHORT
                 )
-                    .show()
+                    .show()*/
                 mAlertDialog.dismiss()
             }
         }

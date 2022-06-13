@@ -15,6 +15,6 @@
         android:icon="@drawable/filter"
         android:iconTint="@color/white"
         android:title="@string/filter"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
 
 </menu>
