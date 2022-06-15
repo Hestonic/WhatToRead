@@ -8,11 +8,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.pd.databinding.FragmentProfileBinding
+import com.example.pd.ui.main.SessionManager
 
 class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
-
+    private lateinit var sessionManager: SessionManager
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        initViewModel()
+        sessionManager = SessionManager(requireContext())
+    }
+    
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,9 +49,14 @@ class ProfileFragment : Fragment() {
         }
 
         binding.exitButton.setOnClickListener {
+            sessionManager.deleteAuthToken()
             findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToAuthorizationFragment())
         }
 
         return binding.root
+    }
+    
+    private fun initViewModel() {
+    
     }
 }

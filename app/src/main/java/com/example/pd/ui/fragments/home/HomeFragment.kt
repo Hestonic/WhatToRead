@@ -7,8 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.pd.data.api.RetrofitInstance
-import com.example.pd.data.repository.AuthorizationRepositoryImpl
 import com.example.pd.databinding.FragmentHomeBinding
 import com.example.pd.ui.model.HomeHolderData
 

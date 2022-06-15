@@ -1,4 +1,4 @@
-package com.example.pd.data.api.model
+package com.example.pd.data.source.remote.model
 
 data class Registration(
     val first_name: String,

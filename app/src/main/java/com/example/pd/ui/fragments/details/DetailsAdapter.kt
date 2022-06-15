@@ -7,7 +7,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pd.databinding.ItemExpandableDetailsBinding
-import com.example.pd.utils.EqualSpacingItemDecoration
+import com.example.pd.ui.main.EqualSpacingItemDecoration
 import com.example.pd.ui.model.DetailsObjectHolder
 import com.example.pd.ui.model.ExpandableDescription
 

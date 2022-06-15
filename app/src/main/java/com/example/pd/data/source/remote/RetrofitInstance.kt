@@ -1,4 +1,4 @@
-package com.example.pd.data.api
+package com.example.pd.data.source.remote
 
 import com.example.pd.data.source.RemoteDataSource
 import com.example.pd.utils.Constants.Companion.BASE_URL
@@ -6,7 +6,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 
 object RetrofitInstance {
 
@@ -24,10 +23,8 @@ object RetrofitInstance {
             .build()
     }
 
-    private val api: WhatToReadApi by lazy {
+    val api: WhatToReadApi by lazy {
         retrofit.create(WhatToReadApi::class.java)
     }
-
-    val remoteDataSource = RemoteDataSource(api)
     
 }

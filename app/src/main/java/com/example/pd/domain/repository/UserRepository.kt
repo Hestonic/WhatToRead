@@ -1,5 +1,7 @@
 package com.example.pd.domain.repository
 
+import com.example.pd.domain.model.UserDtoModel
+
 interface UserRepository {
-    fun getUser()
+    suspend fun getUser(token: String): Boolean
 }

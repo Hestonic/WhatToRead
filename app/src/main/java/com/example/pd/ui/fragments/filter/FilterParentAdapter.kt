@@ -7,7 +7,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pd.databinding.ItemFilterParentBinding
-import com.example.pd.utils.EqualSpacingItemDecoration
+import com.example.pd.ui.main.EqualSpacingItemDecoration
 import com.example.pd.ui.model.FilterBox
 import com.example.pd.ui.model.FilterObjectHolder
 

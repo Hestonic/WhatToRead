@@ -1,4 +1,4 @@
-package com.example.pd.utils
+package com.example.pd.ui.main
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -16,8 +16,7 @@ class SessionManager(context: Context) {
         prefs.edit().putString(USER_TOKEN, token).apply()
     }
     
-    fun fetchAuthToken(): String? = prefs.getString(USER_TOKEN, null)
-    
+    fun getAuthToken(): String? = prefs.getString(USER_TOKEN, null)
     
     fun deleteAuthToken() {
         prefs.edit().putString(USER_TOKEN, null).apply()

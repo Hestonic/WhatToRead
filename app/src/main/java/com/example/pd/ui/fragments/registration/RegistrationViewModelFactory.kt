@@ -1,19 +1,18 @@
-package com.example.pd.ui.fragments.authorization
+package com.example.pd.ui.fragments.registration
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.pd.domain.repository.AuthorizationRepository
 import com.example.pd.domain.repository.UserRepository
 
-@Suppress("UNCHECKED_CAST")
-class AuthorizationViewModelFactory(
+class RegistrationViewModelFactory(
     private val authorizationRepository: AuthorizationRepository,
     private val userRepository: UserRepository
 ) : ViewModelProvider.Factory {
     @Suppress("unchecked_cast")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(AuthorizationViewModel::class.java))
-            return AuthorizationViewModel(authorizationRepository, userRepository) as T
+        if (modelClass.isAssignableFrom(RegistrationViewModel::class.java))
+            return RegistrationViewModel(authorizationRepository, userRepository) as T
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

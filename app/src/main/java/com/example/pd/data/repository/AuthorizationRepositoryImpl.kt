@@ -16,13 +16,11 @@ class AuthorizationRepositoryImpl(
         val response = remoteDataSource.login(authorizationDtoModel)
         return if (response.isSuccessful) {
             val token = response.headers()["Authorization"]
-            Log.d("response_tag_success", token ?: "Empty")
             token ?: ""
         } else {
             Log.d("response_tag_error", response.errorBody().toString())
             ""
         }
-        
     }
     
     

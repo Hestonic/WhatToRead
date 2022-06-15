@@ -1,4 +1,4 @@
-package com.example.pd.ui
+package com.example.pd
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,8 +13,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.pd.R
 import com.example.pd.databinding.MainActivityBinding
 
-// TODO: Реализовать поиск 
-// TODO:  
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: MainActivityBinding
