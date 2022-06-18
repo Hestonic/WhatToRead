@@ -54,7 +54,6 @@
             android:id="@+id/edit_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="secret"
             android:inputType="textPassword"
             android:maxLength="20" />
 
@@ -75,7 +74,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_login"
             android:layout_width="match_parent"
-            android:text="user@email.com"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"/>
 

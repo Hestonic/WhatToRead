@@ -47,4 +47,5 @@
     <string name="search">Поиск</string>
     <string name="your_rating">Ваша оценка:</string>
     <string name="comment_placeholder">Поделитесь своим мнением насчёт этой книги</string>
+    <string name="add_comment">+ Оставить отзыв</string>
 </resources>

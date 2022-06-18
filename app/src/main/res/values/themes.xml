@@ -118,4 +118,10 @@
         <item name="fontFamily">@font/roboto_medium</item>
     </style>
 
+    <style name="add_comment_link">
+        <item name="lineHeight">21dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
 </resources>

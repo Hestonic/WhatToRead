@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.search.SearchFragment">
 
-    <!-- TODO: сделать иконку поиска в ToolBar -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="0dp"

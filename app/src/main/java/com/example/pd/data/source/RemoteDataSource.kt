@@ -1,9 +1,10 @@
 package com.example.pd.data.source
 
+import com.example.pd.data.mapper.AuthorizationDtoMapperImpl
 import com.example.pd.data.source.remote.WhatToReadApi
 import com.example.pd.data.source.remote.model.UserResponse
-import com.example.pd.data.mapper.AuthorizationDtoMapperImpl
 import com.example.pd.domain.model.AuthorizationDtoModel
+import com.example.pd.domain.model.RegistrationDtoModel
 import retrofit2.Response
 
 class RemoteDataSource(private val wtrApi: WhatToReadApi) {
@@ -14,8 +15,15 @@ class RemoteDataSource(private val wtrApi: WhatToReadApi) {
         return wtrApi.login(loginRequest)
     }
     
+    suspend fun registration(registrationDtoModel: RegistrationDtoModel): Response<Void> {
+        val registrationRequest =
+            AuthorizationDtoMapperImpl.mapRegistrationDtoModelToRequest(registrationDtoModel)
+        return wtrApi.registration(registrationRequest)
+    }
+    
     suspend fun getUser(token: String): Response<UserResponse> {
         return wtrApi.getUser(token)
     }
+    
     
 }

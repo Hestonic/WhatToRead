@@ -37,6 +37,6 @@ class DetailsFragment : Fragment() {
     }
 
     private fun initViewModel() {
-        // TODO:
+    
     }
 }

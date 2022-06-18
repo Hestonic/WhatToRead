@@ -25,19 +25,12 @@ class SettingsFragment : Fragment() {
 
         binding.editName.setOnClickListener {
             val dialogEditNameBinding = DialogEditNameBinding.inflate(inflater, container, false)
-                //LayoutInflater.from(requireContext()).inflate(R.layout.dialog_edit_name, null)
             val mBuilder = AlertDialog.Builder(requireContext())
                 .setView(dialogEditNameBinding.root)
             val mAlertDialog = mBuilder.show()
 
             /*TODO: dialog fragment*/
             dialogEditNameBinding.saveChanges.setOnClickListener {
-                /*Toast.makeText(
-                    requireContext(),
-                    "Данные успешно изменены, ${editName.text}, ${editSurname.text}",
-                    Toast.LENGTH_SHORT
-                )
-                    .show()*/
                 mAlertDialog.dismiss()
             }
         }

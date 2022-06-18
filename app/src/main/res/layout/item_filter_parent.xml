@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="@id/tittle"
         app:layout_constraintBottom_toBottomOf="@id/tittle"
         app:layout_constraintEnd_toEndOf="parent"/>
-<!--TODO: можно сделать через textInputLayout-->
+
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view"
         android:layout_width="match_parent"

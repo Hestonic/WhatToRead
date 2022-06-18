@@ -79,15 +79,7 @@
         app:layout_constraintStart_toStartOf="@id/poster_name"
         app:layout_constraintTop_toBottomOf="@id/genres" />
 
-    <!-- TODO: сделать rating bar-->
-    <!--<RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background=""
-        app:layout_constraintTop_toTopOf="@id/label_grade"
-        app:layout_constraintStart_toEndOf="@id/label_grade"
-        app:layout_constraintBottom_toBottomOf="@id/label_grade"/>-->
-
+    <!--TODO: Доделать звёзды-->
     <!--<ImageView
         android:id="@+id/ic_star_1"
         android:layout_width="wrap_content"
@@ -189,36 +181,6 @@
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="image, age_limit" />
-
-    <!-- TODO: сделать тень -->
-   <!-- <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/block_annotation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/round_bg_item_poster"
-        android:orientation="vertical"
-        android:paddingHorizontal="10dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/description_barrier">
-
-        <TextView
-            android:id="@+id/label_annotation"
-            style="@style/poster_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_annotation" />
-
-        <TextView
-            android:id="@+id/annotation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/annotation" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

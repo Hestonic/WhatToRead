@@ -22,7 +22,8 @@ class AuthorizationFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sessionManager = SessionManager(requireContext())
-        if (sessionManager.getAuthToken() != null) navigateToHomeFragment()
+        val token = sessionManager.getAuthToken()
+        if (token != null && token != "") navigateToHomeFragment()
         initViewModel()
     }
     
@@ -31,34 +32,29 @@ class AuthorizationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAuthorizationBinding.inflate(inflater, container, false)
-        
+    
         binding.registrationLabel.setOnClickListener {
-            findNavController().navigate(AuthorizationFragmentDirections.actionAuthorizationFragmentToRegistrationFragment())
+            navigateToRegistrationFragment()
         }
     
         binding.authorizationButton.setOnClickListener {
             val login = binding.editLogin.text.toString()
             val password = binding.editPassword.text.toString()
-            if (login.isNotEmpty() && password.isNotEmpty()) viewModel.login(login, password)
-            else makeToast("Не все поля заполнены")
+            if (login.isEmpty() || password.isEmpty()) makeToast("Не все поля заполнены")
+            else viewModel.login(login, password)
         }
     
-        viewModel.authorizationToken.observe(viewLifecycleOwner) {
-            if (it != "") {
-                sessionManager.saveAuthToken(it)
-                sessionManager.getAuthToken()?.let { token ->
-                    viewModel.getUser(token)
+        viewModel.token.observe(viewLifecycleOwner) {
+            when (it) {
+                "Not Found", "404", null, "" -> makeToast("Нет соединения с сервером")
+                "Bad Request" -> makeToast("Неверный логин или пароль")
+                else -> {
+                    sessionManager.saveAuthToken(it)
+                    sessionManager.getAuthToken()?.let {
+                        navigateToHomeFragment()
+                    }
                 }
-            } else  makeToast("Не удалось получить данные с сервера")
-            
-        }
-    
-        lifecycleScope.launchWhenStarted {
-            viewModel.navigationFlow.collect { getUserIsSuccess ->
-                if (getUserIsSuccess) navigateToHomeFragment()
-                else makeToast("Войти не удалось")
             }
-        
         }
     
         lifecycleScope.launchWhenStarted {
@@ -66,9 +62,6 @@ class AuthorizationFragment : Fragment() {
                 if (loginFailed) makeToast("Ошибка соединения с сервером")
             }
         }
-        
-    
-    
     
         return binding.root
     }
@@ -83,14 +76,20 @@ class AuthorizationFragment : Fragment() {
         viewModel = ViewModelProvider(this, viewModelFactory)[AuthorizationViewModel::class.java]
     }
     
+    private fun makeToast(text: String) {
+        Toast.makeText(requireContext(), text, Toast.LENGTH_LONG).show()
+    }
+    
     private fun navigateToHomeFragment() {
         val action =
             AuthorizationFragmentDirections.actionAuthorizationFragmentToHomeFragment()
         findNavController().navigate(action)
     }
     
-    private fun makeToast(text: String) {
-        Toast.makeText(requireContext(), text, Toast.LENGTH_LONG).show()
+    private fun navigateToRegistrationFragment() {
+        val action =
+            AuthorizationFragmentDirections.actionAuthorizationFragmentToRegistrationFragment()
+        findNavController().navigate(action)
     }
     
 }

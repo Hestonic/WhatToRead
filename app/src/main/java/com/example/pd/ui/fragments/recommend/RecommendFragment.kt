@@ -38,6 +38,6 @@ class RecommendFragment : Fragment() {
     }
 
     private fun initViewModel() {
-        // TODO:
+    
     }
 }

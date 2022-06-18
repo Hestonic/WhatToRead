@@ -1,5 +1,6 @@
 package com.example.pd.ui.fragments.authorization
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -7,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.pd.domain.repository.AuthorizationRepository
 import com.example.pd.domain.repository.UserRepository
 import com.example.pd.ui.mapper.AuthorizationUiMapper
+import com.example.pd.ui.model.AuthorizationUiModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
@@ -17,33 +19,22 @@ class AuthorizationViewModel(
     private val userRepository: UserRepository
 ) : ViewModel() {
     
-    private val _authorizationToken: MutableLiveData<String> = MutableLiveData()
-    val authorizationToken: LiveData<String> = _authorizationToken
-    
-    private val navigationChannel = Channel<Boolean>()
-    val navigationFlow get() = navigationChannel.receiveAsFlow()
+    private val _token: MutableLiveData<String?> = MutableLiveData()
+    val token: LiveData<String?> = _token
     
     private val loginFailedChannel = Channel<Boolean>()
-    val loginFailedFlow get() = navigationChannel.receiveAsFlow()
+    val loginFailedFlow get() = loginFailedChannel.receiveAsFlow()
     
     fun login(login: String, password: String) {
         viewModelScope.launch {
-            val authorizationUiModel = AuthorizationUiMapper.mapLoginUiModel(login, password)
             try {
-                val token = authorizationRepository.login(authorizationUiModel)
-                _authorizationToken.postValue(token)
+                val authorizationUiModel = AuthorizationUiMapper.mapUiModel(login, password)
+                val receivedToken = authorizationRepository.login(authorizationUiModel)
+                _token.postValue(receivedToken)
             } catch (e: Exception) {
                 loginFailedChannel.send(true)
                 e.printStackTrace()
             }
-            
-        }
-    }
-    
-    fun getUser(token: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            val getUserIsSuccess = userRepository.getUser(token)
-            navigationChannel.send(getUserIsSuccess)
         }
     }
     

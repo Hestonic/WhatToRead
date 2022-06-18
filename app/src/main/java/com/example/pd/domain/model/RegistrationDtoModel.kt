@@ -1,6 +1,6 @@
-package com.example.pd.data.source.remote.model
+package com.example.pd.domain.model
 
-data class Registration(
+data class RegistrationDtoModel(
     val first_name: String,
     val email: String,
     val password: String,
