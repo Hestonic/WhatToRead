@@ -9,20 +9,31 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.example.pd.App
 import com.example.pd.R
 import com.example.pd.databinding.DialogEditNameBinding
 import com.example.pd.databinding.FragmentSettingsBinding
+import com.example.pd.ui.main.SessionManager
 
 class SettingsFragment : Fragment() {
-
+    
     private lateinit var binding: FragmentSettingsBinding
-
+    private lateinit var sessionManager: SessionManager
+    private lateinit var viewModel: SettingsViewModel
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        sessionManager = SessionManager(requireContext())
+        initViewModel()
+    }
+    
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
-
+        
         binding.editName.setOnClickListener {
             val dialogEditNameBinding = DialogEditNameBinding.inflate(inflater, container, false)
             val mBuilder = AlertDialog.Builder(requireContext())
@@ -84,7 +95,14 @@ class SettingsFragment : Fragment() {
                 mAlertDialog.dismiss()
             }
         }
-
+        
         return binding.root
+    }
+    
+    private fun initViewModel() {
+        val userRepository =
+            (requireActivity().application as App).dependencyInjection.userRepository
+        val viewModelFactory = SettingsViewModelFactory(userRepository)
+        viewModel = ViewModelProvider(this, viewModelFactory)[SettingsViewModel::class.java]
     }
 }

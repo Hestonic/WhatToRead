@@ -34,7 +34,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun initViewModel() {
-//        val repository = AuthorizationRepositoryImpl(RetrofitInstance.remoteDataSource)
         val viewModelFactory = HomeViewModelFactory()
         viewModel = ViewModelProvider(this, viewModelFactory)[HomeViewModel::class.java]
     }
@@ -43,6 +42,5 @@ class HomeFragment : Fragment() {
         binding.recyclerview.adapter = adapter
         binding.recyclerview.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.recyclerview.hasFixedSize()
-        /*binding.recyclerview.addItemDecoration()*/
     }
 }
