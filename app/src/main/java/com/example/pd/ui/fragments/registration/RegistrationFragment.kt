@@ -1,7 +1,6 @@
 package com.example.pd.ui.fragments.registration
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -80,10 +79,8 @@ class RegistrationFragment : Fragment() {
     private fun initViewModel() {
         val authorizationRepository =
             (requireActivity().application as App).dependencyInjection.authorizationRepository
-        val userRepository =
-            (requireActivity().application as App).dependencyInjection.userRepository
         val viewModelFactory =
-            RegistrationViewModelFactory(authorizationRepository, userRepository)
+            RegistrationViewModelFactory(authorizationRepository)
         viewModel = ViewModelProvider(this, viewModelFactory)[RegistrationViewModel::class.java]
     }
     

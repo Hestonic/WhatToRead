@@ -11,6 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.pd.databinding.MainActivityBinding
 
+// TODO: Сделать так, чтобы настройки профиля подгружались на HomeFragment и добавлялись в БД
 class MainActivity : AppCompatActivity() {
     
     private lateinit var binding: MainActivityBinding

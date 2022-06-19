@@ -69,10 +69,8 @@ class AuthorizationFragment : Fragment() {
     private fun initViewModel() {
         val authorizationRepository =
             (requireActivity().application as App).dependencyInjection.authorizationRepository
-        val userRepository =
-            (requireActivity().application as App).dependencyInjection.userRepository
         val viewModelFactory =
-            AuthorizationViewModelFactory(authorizationRepository, userRepository)
+            AuthorizationViewModelFactory(authorizationRepository)
         viewModel = ViewModelProvider(this, viewModelFactory)[AuthorizationViewModel::class.java]
     }
     
