@@ -154,14 +154,25 @@
         app:layout_constraintTop_toTopOf="@id/ic_star" />
 
     <TextView
-        android:id="@+id/poster_reviews"
+        android:id="@+id/reviews_label"
         style="@style/poster_rating_reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/reviews_label"
+        app:layout_constraintStart_toStartOf="@id/poster_name"
+        app:layout_constraintTop_toBottomOf="@id/label_average_rating" />
+
+    <TextView
+        android:id="@+id/poster_reviews"
+        style="@style/poster_age_limit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="@string/reviews_value"
+        android:layout_marginStart="6dp"
+        android:text="@string/value"
+        app:layout_constraintStart_toEndOf="@id/reviews_label"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/poster_name"
         app:layout_constraintTop_toBottomOf="@id/label_average_rating" />
 
     <TextView

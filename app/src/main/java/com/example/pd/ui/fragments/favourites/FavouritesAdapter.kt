@@ -35,7 +35,7 @@ class FavouritesAdapter : RecyclerView.Adapter<FavouritesAdapter.FavouritesHolde
 
             favouriteLayout.setOnClickListener {
                 favouriteLayout.findNavController()
-                    .navigate(FavouritesFragmentDirections.actionFavouritesFragmentToDetailsFragment())
+                    .navigate(FavouritesFragmentDirections.actionFavouritesFragmentToDetailsFragment("1"))
             }
         }
     }

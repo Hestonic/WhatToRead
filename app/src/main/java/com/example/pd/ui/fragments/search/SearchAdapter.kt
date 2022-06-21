@@ -41,7 +41,7 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
             binding.posterDescription.text = searchUiModel.description
 
             poster.setOnClickListener {
-                val action = SearchFragmentDirections.actionSearchFragmentToDetailsFragment()
+                val action = SearchFragmentDirections.actionSearchFragmentToDetailsFragment("1")
                 poster.findNavController().navigate(action)
             }
         }

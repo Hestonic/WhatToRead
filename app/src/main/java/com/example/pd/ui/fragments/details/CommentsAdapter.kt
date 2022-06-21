@@ -17,8 +17,9 @@ class CommentsAdapter : RecyclerView.Adapter<CommentsAdapter.CommentsHolder>() {
     }
 
     override fun onBindViewHolder(holder: CommentsHolder, position: Int) {
-        val comment = comments[position]
-        holder.bind(comment)
+        comments.getOrNull(position)?.let {
+            holder.bind(it)
+        }
     }
 
     override fun getItemCount(): Int = comments.size

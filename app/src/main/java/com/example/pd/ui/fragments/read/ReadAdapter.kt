@@ -36,7 +36,7 @@ class ReadAdapter : RecyclerView.Adapter<ReadAdapter.ReadHolder>() {
 
             favouriteLayout.setOnClickListener {
                 favouriteLayout.findNavController()
-                    .navigate(ReadFragmentDirections.actionReadFragmentToDetailsFragment())
+                    .navigate(ReadFragmentDirections.actionReadFragmentToDetailsFragment("1"))
             }
         }
     }

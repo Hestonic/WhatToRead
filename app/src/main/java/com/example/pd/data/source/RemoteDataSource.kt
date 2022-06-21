@@ -2,6 +2,8 @@ package com.example.pd.data.source
 
 import com.example.pd.data.mapper.AuthorizationDtoMapperImpl
 import com.example.pd.data.source.remote.WhatToReadApi
+import com.example.pd.data.source.remote.model.BookResponse
+import com.example.pd.data.source.remote.model.BooksResponse
 import com.example.pd.data.source.remote.model.UserResponse
 import com.example.pd.domain.model.AuthorizationDtoModel
 import com.example.pd.domain.model.RegistrationDtoModel
@@ -25,5 +27,12 @@ class RemoteDataSource(private val wtrApi: WhatToReadApi) {
         return wtrApi.getUser(token)
     }
     
+    suspend fun getBooks(): Response<BooksResponse> {
+        return wtrApi.getBooks()
+    }
+    
+    suspend fun getBook(id: String): Response<BookResponse> {
+        return wtrApi.getBook(id)
+    }
     
 }

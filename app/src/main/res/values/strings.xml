@@ -48,4 +48,8 @@
     <string name="your_rating">Ваша оценка:</string>
     <string name="comment_placeholder">Поделитесь своим мнением насчёт этой книги</string>
     <string name="add_comment">+ Оставить отзыв</string>
+    <string name="email">Почта</string>
+    <string name="example_email_com">example@email.com</string>
+    <string name="reviews_label">Отзывов:</string>
+    <string name="value">183</string>
 </resources>

@@ -31,7 +31,7 @@ class RecommendAdapter : RecyclerView.Adapter<RecommendAdapter.RecommendHolder>(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(recommendUiModel: RecommendUiModel) = binding.run {
             val labelReviews = "Отзывов: "
-            binding.posterName.text = recommendUiModel.name
+            binding.posterName.text = recommendUiModel.title
             binding.posterAuthor.text = recommendUiModel.author
             binding.posterGenres.text = recommendUiModel.genres
             binding.posterRating.text = recommendUiModel.rating.toString()
@@ -39,7 +39,7 @@ class RecommendAdapter : RecyclerView.Adapter<RecommendAdapter.RecommendHolder>(
             binding.posterDescription.text = recommendUiModel.description
 
             poster.setOnClickListener {
-                val action = RecommendFragmentDirections.actionRecommendFragmentToDetailsFragment()
+                val action = RecommendFragmentDirections.actionRecommendFragmentToDetailsFragment(recommendUiModel.id.toString())
                 poster.findNavController().navigate(action)
             }
         }
