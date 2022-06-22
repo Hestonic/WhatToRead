@@ -33,7 +33,7 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
         @SuppressLint("SetTextI18n")
         fun bind(searchUiModel: SearchUiModel) = binding.run {
             val labelReviews = "Отзывов: "
-            binding.posterName.text = searchUiModel.name
+            binding.posterName.text = searchUiModel.title
             binding.posterAuthor.text = searchUiModel.author
             binding.posterGenres.text = searchUiModel.genres
             binding.posterRating.text = searchUiModel.rating.toString()
@@ -41,7 +41,8 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
             binding.posterDescription.text = searchUiModel.description
 
             poster.setOnClickListener {
-                val action = SearchFragmentDirections.actionSearchFragmentToDetailsFragment("1")
+                val action =
+                    SearchFragmentDirections.actionSearchFragmentToDetailsFragment(searchUiModel.id.toString())
                 poster.findNavController().navigate(action)
             }
         }
@@ -52,4 +53,6 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
         searchList = search
         notifyDataSetChanged()
     }
+    
+    fun getData(): List<SearchUiModel> = searchList
 }

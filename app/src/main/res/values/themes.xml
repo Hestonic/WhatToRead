@@ -51,7 +51,7 @@
     </style>
 
     <style name="poster_rating_reviews">
-        <item name="fontFamily">@font/roboto_black</item>
+        <item name="fontFamily">@font/roboto_regular</item>
         <item name="lineHeight">16sp</item>
         <item name="android:textSize">14sp</item>
     </style>

@@ -47,7 +47,6 @@ class DetailsAdapter : RecyclerView.Adapter<DetailsAdapter.DetailsHolder>() {
 
         fun bind(details: ExpandableDescription) = binding.run {
             adapter.setData(details.comments)
-            Log.d("tag", "${details.tittle} ${details.visible}")
             tittle.text = details.tittle
             description.text = details.description
             expandableLayout.isVisible = details.visible

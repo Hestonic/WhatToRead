@@ -1,14 +1,16 @@
 package com.example.pd.ui.model
 
 data class SearchUiModel(
-    val name: String,
+    val id: Int,
+    val title: String,
     val author: String,
     val genres: String,
     val rating: Double,
     val reviews: Int,
     val description: String,
 )
-
+/*
+//TODO: не забыть удалить
 object SearchHolderData {
     private val search1 = SearchUiModel(
         "Билли Саммерс",
@@ -67,4 +69,4 @@ object SearchHolderData {
         search4,
         search5,
     )
-}
+}*/

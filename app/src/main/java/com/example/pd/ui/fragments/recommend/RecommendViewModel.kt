@@ -32,7 +32,6 @@ class RecommendViewModel(private val booksRepository: BooksRepository) : ViewMod
                 e.printStackTrace()
                 getBooksFailedChannel.send("Ошибка соединения с сервером")
             }
-            
         }
     }
 }

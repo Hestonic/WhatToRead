@@ -13,7 +13,7 @@
     <string name="label_genres">Жанр</string>
     <string name="label_rating">Ваша оценка:</string>
     <string name="label_average_rating">Средняя оценка:</string>
-    <string name="age_limit">Возрастное ограничение: 16+</string>
+    <string name="age_limit">16+</string>
     <string name="label_annotation">Аннотация</string>
     <string name="annotation">Новый роман Стивена Кинга! Захватывающая история о хорошем парне, который выполняет плохую работу. Стивен Кинг — один из самых популярных авторов современности. Он написал свыше шести десятков бестселлеров, которые переведены на 44 языка, изданы в 80 странах мира и разошлись тиражом свыше 400.000.000 экземпляров. «Лучшая книга Стивена Кинга за долгие годы» по версии газеты The Guardian.</string>
     <string name="morphological">Морфологический разбор</string>

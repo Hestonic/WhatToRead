@@ -5,18 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.pd.App
 import com.example.pd.databinding.FragmentFilterBinding
-import com.example.pd.ui.model.FilterObjectHolder
 
 class FilterFragment : Fragment() {
-
+    
     private lateinit var binding: FragmentFilterBinding
+    private lateinit var viewModel: FilterViewModel
     private val adapter = FilterParentAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initViewModel()
+        viewModel.getFilter()
     }
 
     override fun onCreateView(
@@ -25,7 +28,10 @@ class FilterFragment : Fragment() {
     ): View {
         binding = FragmentFilterBinding.inflate(inflater, container, false)
         setupRecycler()
-        adapter.setData(FilterObjectHolder.filterBoxes)
+        
+        viewModel.filterLiveData.observe(viewLifecycleOwner) {
+            adapter.setData(it)
+        }
 
         return binding.root
     }
@@ -36,6 +42,9 @@ class FilterFragment : Fragment() {
     }
 
     private fun initViewModel() {
-
+        val filterRepository =
+            (requireActivity().application as App).dependencyInjection.filterRepository
+        val viewModelFactory = FilterViewModelFactory(filterRepository)
+        viewModel = ViewModelProvider(this, viewModelFactory)[FilterViewModel::class.java]
     }
 }

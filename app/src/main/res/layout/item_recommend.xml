@@ -88,9 +88,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
         android:src="@drawable/favourite_black"
-        app:layout_constraintBottom_toBottomOf="@id/poster_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/poster_name" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/poster_description"

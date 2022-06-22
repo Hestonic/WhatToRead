@@ -155,7 +155,7 @@
 
     <TextView
         android:id="@+id/reviews_label"
-        style="@style/poster_rating_reviews"
+        style="@style/poster_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
@@ -177,7 +177,7 @@
 
     <TextView
         android:id="@+id/age_limit"
-        style="@style/poster_rating_reviews"
+        style="@style/poster_author"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
