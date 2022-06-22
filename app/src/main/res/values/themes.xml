@@ -1,0 +1,134 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.PD" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/black_cobalt</item>
+    </style>
+
+    <style name="poster_name">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">21sp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="label_expandable_details_tittle">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">21sp</item>
+    </style>
+
+    <style name="label_expandable_details_tittle_clicked">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">21sp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="poster_expandable_tittle">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">21sp</item>
+    </style>
+
+    <style name="poster_author">
+        <item name="lineHeight">16sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="poster_genres">
+        <item name="lineHeight">14sp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="poster_rating_reviews">
+        <item name="fontFamily">@font/roboto_black</item>
+        <item name="lineHeight">16sp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="poster_age_limit">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="lineHeight">16sp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="poster_description">
+        <item name="lineHeight">14sp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="poster_more">
+        <item name="lineHeight">14sp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/dark_purple</item>
+    </style>
+
+    <style name="profile_name">
+        <item name="lineHeight">21dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="profile_chips">
+        <item name="lineHeight">21dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="phone_number_label">
+        <item name="lineHeight">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="save_changes">
+        <item name="lineHeight">18dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/dark_purple</item>
+    </style>
+
+    <style name="recommends_top_text">
+        <item name="lineHeight">16dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="authorization_label">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black_cobalt_80</item>
+    </style>
+
+    <style name="authorization_label_active">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/dark_purple</item>
+    </style>
+
+    <style name="delimiter">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/black_cobalt</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+    </style>
+
+    <style name="comment_name">
+        <item name="lineHeight">21dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="add_comment_link">
+        <item name="lineHeight">21dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+</resources>

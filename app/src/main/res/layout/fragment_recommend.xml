@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.recommend.RecommendFragment">
+
+    <TextView
+        android:id="@+id/preferences_text"
+        style="@style/poster_rating_reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/preferences_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/favourite_filled"
+        app:layout_constraintBottom_toBottomOf="@id/ic_book"
+        app:layout_constraintEnd_toStartOf="@id/ic_book"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ic_book" />
+
+    <TextView
+        android:id="@+id/ic_favourite_text"
+        style="@style/recommends_top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="@string/favourites_count"
+        app:layout_constraintBottom_toBottomOf="@id/ic_book"
+        app:layout_constraintStart_toEndOf="@id/ic_favourite"
+        app:layout_constraintTop_toTopOf="@id/ic_book" />
+
+    <ImageView
+        android:id="@+id/ic_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/book_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/preferences_text" />
+
+    <TextView
+        android:id="@+id/ic_book_text"
+        style="@style/recommends_top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="@string/favourites_count"
+        app:layout_constraintBottom_toBottomOf="@id/ic_book"
+        app:layout_constraintStart_toEndOf="@id/ic_book"
+        app:layout_constraintTop_toTopOf="@id/ic_book" />
+
+    <ImageView
+        android:id="@+id/ic_watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/view_light"
+        app:layout_constraintBottom_toBottomOf="@id/ic_book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.399"
+        app:layout_constraintStart_toEndOf="@id/ic_book"
+        app:layout_constraintTop_toTopOf="@id/ic_book"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ic_watch_text"
+        style="@style/recommends_top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="@string/favourites_count"
+        app:layout_constraintBottom_toBottomOf="@id/ic_book"
+        app:layout_constraintStart_toEndOf="@id/ic_watch"
+        app:layout_constraintTop_toTopOf="@id/ic_book" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="ic_book, ic_favourite, ic_watch" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

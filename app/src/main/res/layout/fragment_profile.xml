@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.profile.ProfileFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fio_block"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/favourites_block"
+        app:layout_constraintStart_toStartOf="@+id/favourites_block"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@color/dark_purple" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            style="@style/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:text="@string/profile_name" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/favourites_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_bg_item_poster"
+        android:orientation="horizontal"
+        android:paddingVertical="6dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fio_block">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/favorite_light" />
+
+        <TextView
+            style="@style/profile_chips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:text="@string/favorites" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/read_block"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/round_bg_item_poster"
+        android:orientation="horizontal"
+        android:paddingVertical="6dp"
+        android:paddingStart="12dp"
+        app:layout_constraintEnd_toEndOf="@id/favourites_block"
+        app:layout_constraintStart_toStartOf="@id/favourites_block"
+        app:layout_constraintTop_toBottomOf="@id/favourites_block"
+        tools:ignore="RtlSymmetry">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/book_light" />
+
+        <TextView
+            style="@style/profile_chips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:text="@string/read" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/settings_block"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/round_bg_item_poster"
+        android:orientation="horizontal"
+        android:paddingVertical="6dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/favourites_block"
+        app:layout_constraintStart_toStartOf="@+id/favourites_block"
+        app:layout_constraintTop_toBottomOf="@id/read_block">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/setting_line_light" />
+
+        <TextView
+            style="@style/profile_chips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:text="@string/settings" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="@color/poster_bg"
+        android:text="@string/exit"
+        android:textColor="@color/black_cobalt"
+        android:textColorHint="@color/black_cobalt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_block" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
