@@ -35,15 +35,14 @@ class DetailsFragment : Fragment() {
         binding = FragmentDetailsBinding.inflate(inflater, container, false)
         setupRecycler()
         viewModel.detailsUiModelLiveData.observe(viewLifecycleOwner) { detailsUiModel ->
-            adapter.setData(detailsUiModel.expandableDescription)
+            adapter.setData(detailsUiModel)
             setUi(detailsUiModel)
         }
         
         lifecycleScope.launchWhenStarted {
             viewModel.getBookFailedFlow.collect { makeToast(it) }
         }
-
-//        adapter.setData()
+        
         return binding.root
     }
     

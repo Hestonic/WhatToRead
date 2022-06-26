@@ -131,5 +131,12 @@
         android:id="@+id/commentFragment"
         android:name="com.example.pd.ui.fragments.comment.CommentFragment"
         android:label="fragment_comment"
-        tools:layout="@layout/fragment_comment" />
+        tools:layout="@layout/fragment_comment" >
+        <argument
+            android:name="bookId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_commentFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
 </navigation>

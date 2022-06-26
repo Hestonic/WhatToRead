@@ -1,7 +1,6 @@
 package com.example.pd.ui.fragments.details
 
 import android.annotation.SuppressLint
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
@@ -10,12 +9,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pd.databinding.ItemExpandableDetailsBinding
 import com.example.pd.ui.main.EqualSpacingItemDecoration
+import com.example.pd.ui.model.DetailsUiModel
 import com.example.pd.ui.model.ExpandableDescription
 
 class DetailsAdapter : RecyclerView.Adapter<DetailsAdapter.DetailsHolder>() {
 
     private var detailsList: List<ExpandableDescription> = emptyList()
     private val adapter = CommentsAdapter()
+    private var bookId = 1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DetailsHolder {
         val binding = ItemExpandableDetailsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -60,7 +61,7 @@ class DetailsAdapter : RecyclerView.Adapter<DetailsAdapter.DetailsHolder>() {
             }
     
             binding.addComment.setOnClickListener {
-                val action = DetailsFragmentDirections.actionDetailsFragmentToCommentFragment()
+                val action = DetailsFragmentDirections.actionDetailsFragmentToCommentFragment(bookId.toString())
                 itemView.findNavController().navigate(action)
             }
     
@@ -76,8 +77,9 @@ class DetailsAdapter : RecyclerView.Adapter<DetailsAdapter.DetailsHolder>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(data: List<ExpandableDescription>) {
-        detailsList = data
+    fun setData(detailsList: DetailsUiModel) {
+        this.detailsList = detailsList.expandableDescription
+        bookId = detailsList.id
         notifyDataSetChanged()
     }
 }

@@ -20,7 +20,7 @@
         android:id="@+id/star_1"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/star_filled"
+        android:src="@drawable/star_black"
         app:layout_constraintBottom_toBottomOf="@id/your_rating"
         app:layout_constraintStart_toEndOf="@id/your_rating"
         app:layout_constraintTop_toTopOf="@id/your_rating" />
@@ -29,7 +29,7 @@
         android:id="@+id/star_2"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/star_filled"
+        android:src="@drawable/star_black"
         app:layout_constraintBottom_toBottomOf="@id/star_1"
         app:layout_constraintStart_toEndOf="@id/star_1"
         app:layout_constraintTop_toTopOf="@id/star_1" />
@@ -38,7 +38,7 @@
         android:id="@+id/star_3"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/star_filled"
+        android:src="@drawable/star_black"
         app:layout_constraintBottom_toBottomOf="@id/star_2"
         app:layout_constraintStart_toEndOf="@id/star_2"
         app:layout_constraintTop_toTopOf="@id/star_2" />
@@ -47,7 +47,7 @@
         android:id="@+id/star_4"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/star_filled"
+        android:src="@drawable/star_black"
         app:layout_constraintBottom_toBottomOf="@id/star_3"
         app:layout_constraintStart_toEndOf="@id/star_3"
         app:layout_constraintTop_toTopOf="@id/star_3" />
@@ -56,7 +56,7 @@
         android:id="@+id/star_5"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/star_filled"
+        android:src="@drawable/star_black"
         app:layout_constraintBottom_toBottomOf="@id/star_4"
         app:layout_constraintStart_toEndOf="@id/star_4"
         app:layout_constraintTop_toTopOf="@id/star_4" />
