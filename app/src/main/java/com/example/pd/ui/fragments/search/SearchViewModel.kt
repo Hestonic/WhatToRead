@@ -76,11 +76,7 @@ class SearchViewModel(private val booksRepository: BooksRepository) : ViewModel(
                     }
                     _searchUiModeLiveData.postValue(filteredSearch.distinct())
                 }
-                
-                
             }
-            
-            
         }
     }
 }

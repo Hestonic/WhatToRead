@@ -26,5 +26,4 @@ class CommentViewModel(private val commentRepository: CommentRepository) : ViewM
             
         }
     }
-    
 }

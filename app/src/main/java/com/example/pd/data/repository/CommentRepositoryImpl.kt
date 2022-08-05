@@ -10,5 +10,4 @@ class CommentRepositoryImpl(private val remoteDataSource: RemoteDataSource) : Co
     override suspend fun publishComment(commentUiModel: CommentUiModel) {
         val commentDtoModel = CommentDtoMapperImpl.mapCommentUiModelToDto(commentUiModel)
     }
-    
 }

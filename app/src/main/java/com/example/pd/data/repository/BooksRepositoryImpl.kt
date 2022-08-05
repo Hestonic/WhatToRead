@@ -26,5 +26,4 @@ class BooksRepositoryImpl(private val remoteDataSource: RemoteDataSource) : Book
         }
         return null
     }
-    
 }

@@ -35,18 +35,6 @@ class FilterViewModel(private val filterRepository: FilterRepository) : ViewMode
                 e.printStackTrace()
                 getFilterFailedChannel.send("Ошибка соединения с сервером")
             }
-            
         }
     }
-    
-    private fun getGenres() {
-        viewModelScope.launch {
-        
-        }
-    }
-    
-    private fun getAuthors() {
-    
-    }
-    
 }
